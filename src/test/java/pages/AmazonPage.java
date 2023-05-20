@@ -19,7 +19,8 @@ public class AmazonPage {
 
     public AmazonPage(){
         PageFactory.initElements(Driver.getDriver(),this);
-        // bu ayari constructor icine koyma sebebimiz :
+
+          // bu ayari constructor icine koyma sebebimiz :
         // page sayfalarina obje olusturularak ulasildigi icin
         // kim page sayfasini kullanmak isterse
         // page sayfasindan obje olusturmak icin, constructor calisacak
