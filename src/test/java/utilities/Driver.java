@@ -11,12 +11,13 @@ import java.time.Duration;
 
 public class Driver {
 
-    static WebDriver driver;
+    private static WebDriver driver;
+    private Driver(){
+    }
 
     public static WebDriver getDriver(){
 
         String istenenBrowser = ConfigReader.getProperty("browser");
-
 
         if (driver==null){
 
@@ -29,7 +30,6 @@ public class Driver {
                 WebDriverManager.safaridriver().setup();
                 driver = new SafariDriver();
                 break;
-
                 case  "edge" :
                     WebDriverManager.edgedriver().setup();
                     driver = new EdgeDriver();

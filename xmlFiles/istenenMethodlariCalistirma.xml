@@ -1,0 +1,28 @@
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="istenen test methodlarini calistima">
+    
+    <test name="negatif testler">
+        
+        <classes>
+            <class name="tests.day15_POM.C06_qdNegatifLoginTesti">
+                <methods>
+                    <!-- sadece verilen method'lari calistirmak icin include -->
+                    <include name="gecersizSifreTesti"></include>
+                    <include name="gecersizIsimTesti"></include>
+
+                </methods>
+            </class>
+
+            <class name="tests.day14_TestNGFrameworkOlusturma.C01_Priority">
+                <methods>
+                    <!-- sadece verilen method'lar dısındaki tum method'lari calistirmak icin exclude -->
+                    <exclude name="youtubeTesti"></exclude>
+                    <exclude name="amazonTesti"></exclude>
+
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
